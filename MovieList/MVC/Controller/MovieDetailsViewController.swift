@@ -27,9 +27,9 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         if let movieObject = movieObject {
             // The Cast of the movie is not provided in the movie object, checked in postman application, so I am fetching for individual movie again.
-            let creditAPIURL = "https://api.themoviedb.org/3/movie/\(movieObject.id)/credits?api_key=\(APIKeys.getApiKey())&language=en-US"
+            let creditAPIURL = "http://api.themoviedb.org/3/movie/\(movieObject.id)/credits?api_key=\(APIKeys.getApiKey())&language=en-US"
             // For Genre Names to get from genreIds.
-            let genreAPIURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=878c78c15e71a1cb8c70ebb75fda441e&language=en-US"
+            let genreAPIURL = "http://api.themoviedb.org/3/genre/movie/list?api_key=878c78c15e71a1cb8c70ebb75fda441e&language=en-US"
             
             //Calling API Functions to fetch appropriate stuffs
             getCreditFromAPI(creditAPIURL,movieObject: movieObject)

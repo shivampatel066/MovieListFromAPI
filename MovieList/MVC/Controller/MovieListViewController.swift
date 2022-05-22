@@ -12,7 +12,7 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
     var moviesList:[MovieModel] = []
     
-    let movieAPIURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(APIKeys.getApiKey())&language=en-US&page=1"
+    let movieAPIURL = "http://api.themoviedb.org/3/movie/popular?api_key=\(APIKeys.getApiKey())&language=en-US&page=1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
