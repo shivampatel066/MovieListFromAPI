@@ -12,11 +12,12 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
     var moviesList:[MovieModel] = []
     
+    let movieAPIURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(APIKeys.getApiKey())&language=en-US&page=1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        APIHelper.shareInstance.apiCalling { moviesList in
+        APIHelper.shareInstance.getMoviesFromAPI(baseURL:movieAPIURL) { moviesList in
             self.moviesList = moviesList
             DispatchQueue.main.async {
                 self.moviesTableView.reloadData()
@@ -43,10 +44,13 @@ extension MovieListViewController:UITableViewDataSource {
 }
 
 // MARK: TableView Delegate Methods.
-extension MovieListViewController:UITacbleViewDelegate {
+extension MovieListViewController:UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailsViewController") as? MovieDetailsViewController {
+            vc.movieObject = moviesList[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }
