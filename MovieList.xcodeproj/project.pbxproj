@@ -17,6 +17,7 @@
 		8F02DEFD283A3C8200C57AB5 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02DEFC283A3C8200C57AB5 /* MovieModel.swift */; };
 		8F02DEFF283A3E5800C57AB5 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02DEFE283A3E5800C57AB5 /* MovieListViewController.swift */; };
 		8F1A19B6283A404A00AB44A3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A19B5283A404A00AB44A3 /* MovieTableViewCell.swift */; };
+		8F1A19B9283A674300AB44A3 /* UIImageView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A19B8283A674300AB44A3 /* UIImageView+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8F02DEFC283A3C8200C57AB5 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		8F02DEFE283A3E5800C57AB5 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		8F1A19B5283A404A00AB44A3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		8F1A19B8283A674300AB44A3 /* UIImageView+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		8F02DEDD283A350100C57AB5 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				8F1A19B7283A672400AB44A3 /* Extensions */,
 				8F02DEF2283A374700C57AB5 /* Helper */,
 				8F02DEF3283A374E00C57AB5 /* MVC */,
 				8F02DEF4283A375400C57AB5 /* Storyboard */,
@@ -125,6 +128,14 @@
 				8F02DEFE283A3E5800C57AB5 /* MovieListViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F1A19B7283A672400AB44A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F1A19B8283A674300AB44A3 /* UIImageView+UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				8F02DEF6283A3A8300C57AB5 /* APIHelper.swift in Sources */,
 				8F1A19B6283A404A00AB44A3 /* MovieTableViewCell.swift in Sources */,
 				8F02DEDF283A350100C57AB5 /* AppDelegate.swift in Sources */,
+				8F1A19B9283A674300AB44A3 /* UIImageView+UIImage.swift in Sources */,
 				8F02DEFF283A3E5800C57AB5 /* MovieListViewController.swift in Sources */,
 				8F02DEE1283A350100C57AB5 /* SceneDelegate.swift in Sources */,
 				8F02DEF8283A3AFD00C57AB5 /* APIKey.swift in Sources */,

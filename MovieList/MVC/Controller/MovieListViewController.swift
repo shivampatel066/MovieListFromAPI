@@ -9,8 +9,6 @@ import UIKit
 
 class MovieListViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var moviesTableView: UITableView!
     var moviesList:[MovieModel] = []
     
@@ -27,7 +25,7 @@ class MovieListViewController: UIViewController {
     }
 }
 
-// MARK: TableView Delegate/Datasource Methods.
+// MARK: TableView Datasource Methods.
 extension MovieListViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +42,8 @@ extension MovieListViewController:UITableViewDataSource {
     }
 }
 
-extension MovieListViewController:UITableViewDelegate {
+// MARK: TableView Delegate Methods.
+extension MovieListViewController:UITacbleViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
